@@ -14,7 +14,7 @@ ARG BUILD_DATE=unknown
 RUN apk add --no-cache ca-certificates upx
 
 # Pre-cache modules
-COPY go.mod go.sum ./
+COPY go.mod go.sum .
 RUN --mount=type=cache,target=/go/pkg/mod go mod download
 
 # Copy source

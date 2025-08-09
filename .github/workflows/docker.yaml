@@ -11,7 +11,7 @@ permissions:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: ${{ github.repository_owner }}/everyday-devops-go-app
+  IMAGE_NAME: ${{ github.repository_owner }}/ghcr-go-example
 
 jobs:
   build-and-push:
@@ -66,8 +66,4 @@ jobs:
             org.opencontainers.image.revision=${{ github.sha }}
             org.opencontainers.image.version=${{ steps.meta.outputs.version }}
             org.opencontainers.image.source=https://github.com/${{ github.repository }}
-            org.opencontainers.image.created=${{ steps.meta.outputs.build_date }}
-
-      - name: Show published tags
-        run: echo "Pushed: ${{ steps.meta.outputs.tags }}"
-
+              org.opencontainers.image.created=${{ steps.meta.outputs.build_date }}
