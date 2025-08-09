@@ -66,4 +66,4 @@ jobs:
             org.opencontainers.image.revision=${{ github.sha }}
             org.opencontainers.image.version=${{ steps.meta.outputs.version }}
             org.opencontainers.image.source=https://github.com/${{ github.repository }}
-              org.opencontainers.image.created=${{ steps.meta.outputs.build_date }}
+            org.opencontainers.image.created=${{ steps.meta.outputs.build_date }}
